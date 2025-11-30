@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories – RTR</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 15px;
+        }
+
+        .title {
+            text-align: center;
+            padding: 40px 20px 10px;
+            color: #050548;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: center;
+            color: #333;
+            margin: 0 auto 40px auto;
+            max-width: 700px;
+            font-size: 1em;
+        }
+
+        .stories-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            align-items: stretch;
+        }
+
+        .story-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 380px;
+        }
+
+        .story-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .story-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 15px;
+            border: 4px solid #ececec;
+        }
+
+        .story-name {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #04004f;
+            margin-bottom: 5px;
+        }
+
+        .story-role {
+            text-align: center;
+            color: rgb(5, 5, 72);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .story-text {
+            text-align: center;
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.8s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Show More button */
+        .btn-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .btn {
+            background-color: #050548;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333366;
+        }
+
+        @media (max-width: 600px) {
+            .story-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+       <header>
+     <div>
+        <div>
+        <div>
+            <div id="head">
+                <span class="parent-head">
+                <span><i class="fa-brands fa-facebook-f"></i></span>
+                <span><i class="fa-brands fa-x-twitter"></i></span>
+                <span><i class="fa-brands fa-google-plus-g"></i></span>
+                <span><i class="fa-brands fa-linkedin"></i></span>
+                <span><i class="fa-brands fa-square-youtube"></i></span>
+                </span>
+                <div class="contact-info">
+                <span>
+                    <i class="fa-solid fa-phone-flip" style="color: #FFB84C;"></i>+92 (304) 386-6719
+                </span>
+                <span>
+                    <i class="fa-solid fa-phone-flip" style="color: #FFB84C;"></i> +92 (317) 011-3001
+                </span>
+                <button id="call-me">
+                    CALL ME BACK
+                </button>
+                </div>
+            </div>
+
+            <div id="head2">
+                <nav>
+
+                    
+                    <ul>
+                        <img class="logo" src="logo.jpeg" alt="LOGO">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/index.html#our-mission">OUR MISSION</a></li>
+                        <li><a href="/aboutUs.html">ABOUT</a></li>
+                        <li><a href="/index.html#our-services">SERVICES</a></li>
+                        <li><a href="/donations.html">Donation</a></li>
+                        <li><a href="/donations.html">Volunteer</a></li>
+                        <li><a href="/successStories.html">SUCCESS STORIES</a></li>
+                        <li><a href="/index.html#our-services">OUR SERVICES</a></li>
+                        <li><a href="/index.html#contact-us">CONTACT US</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            </div>
+        </div>
+        </header>
+        <hr>
+
+
+    <h1 class="title">Success Stories – RTR</h1>
+    <h3 class="subtitle">Real students. Real struggles. Real success. </h3>
+
+    <p class="description">
+        This page highlights the journeys of students who overcame challenges with the support of RTR. 
+        Each story showcases determination, resilience, and the impact of guidance and mentorship.
+    </p>
+
+    <div class="stories-container" id="stories-container">
+
+        <!-- Story 1 (Female) -->
+        <div class="story-card fade-in">
+            <img src="https://media.istockphoto.com/id/1151233766/photo/portrait-of-confident-muslim-doctor-wearing-hijab-standing-at-the-entrance-of-hospital.jpg?s=612x612&w=0&k=20&c=PXBFPFbmk-HaFMAsaNWplAVXv2U54mwQE9DtanCiIi8=" class="story-img" alt="Ayesha">
+            <h3 class="story-name">Ayesha</h3>
+            <p class="story-role">Became a Medical Student</p>
+            <p class="story-text">Ayesha struggled with tuition fees and exam preparation. RTR helped with scholarship guidance. Today she is proudly studying MBBS.</p>
+        </div>
+
+        <!-- Story 2 (Male) -->
+        <div class="story-card fade-in">
+            <img src="https://onlinehighschool.stanford.edu/sites/default/files/styles/bio_avatar/public/2020-11/MuhammadS.JPG?itok=p5wwykIs" class="story-img" alt="Hamza">
+            <h3 class="story-name">Hamza</h3>
+            <p class="story-role">Secured a Full Scholarship Abroad</p>
+            <p class="story-text">Hamza dreamt of studying overseas and faced paperwork and application hurdles. RTR volunteers guided him through the process and helped him win a full scholarship.</p>
+        </div>
+
+        <!-- Story 3 (Female) -->
+        <div class="story-card fade-in">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy4q7TdOhPKxev6xGY7JVhgSysIBHSaE91Xw&s" class="story-img" alt="Fatima">
+            <h3 class="story-name">Fatima</h3>
+            <p class="story-role">Topper in Her Board Exams</p>
+            <p class="story-text">Fatima faced financial challenges and lacked proper study resources. RTR supported her with study plans and academic counseling. She scored among the highest in her board exams.</p>
+        </div>
+
+        <!-- Story 4 (Male) -->
+        <div class="story-card fade-in">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlePSbWsq25RV5abxEcayGUpmOZNNezl0dtQ&s" class="story-img" alt="Bilal">
+            <h3 class="story-name">Bilal</h3>
+            <p class="story-role">Accepted into an Engineering Program</p>
+            <p class="story-text">Bilal was confused about career choices. RTR mentors guided him, helping him discover his passion for engineering. He is now enrolled in a top engineering university.</p>
+        </div>
+
+        <!-- Story 5 (Female) -->
+        <div class="story-card fade-in" id="story5" style="display: none;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7IUuhJ0MrVAh7d5FoP_517aU0sZWYvzcuLyHwoCjsc4X2hl8PCG-8GYi3O0r3uzV1b0&usqp=CAU" class="story-img" alt="Hiba">
+            <h3 class="story-name">Hiba</h3>
+            <p class="story-role">Won a Laptop Through RTR Aid</p>
+            <p class="story-text">Hiba couldn’t afford a laptop needed for her IT course. Thanks to RTR donors, she received one and is now thriving in her programming classes.</p>
+        </div>
+
+        <!-- Story 6 (Female) -->
+        <div class="story-card fade-in" id="story6" style="display: none;">
+            <img src="https://cdn-ddgcg.nitrocdn.com/tPHCDeyPoQOoksyqyUzkKEzCgBCGthiv/assets/images/optimized/rev-0bd6e8f/habib.edu.pk/wp-content/uploads/2025/01/EE-PLO-1.jpg" class="story-img" alt="Sara">
+            <h3 class="story-name">Sara</h3>
+            <p class="story-role">Excelled in STEM Competitions</p>
+            <p class="story-text">Sara faced limited resources for STEM projects. RTR provided mentorship and materials. She now has multiple awards in science competitions and is pursuing engineering.</p>
+        </div>
+
+    </div>
+
+    <div class="btn-container">
+        <button class="btn" id="show-more-btn">Show More</button>
+    </div>
+      <footer class="site-footer-minimal">
+    <div class="footer-content-minimal">
+        <p>
+            <a href="mailto:info@raisetorise.org">info@raisetorise.org</a> | 
+            <a href="contact.html">Contact Us</a> | 
+            <a href="about.html">About Us</a>
+        </p>
+
+        <div class="social-links-minimal">
+            <a href="#" aria-label="Facebook">Facebook</a> &bull; 
+            <a href="#" aria-label="Instagram">Instagram</a> &bull;
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        
+        <p class="copyright-minimal">
+            &copy; 2025 Raise to Rise | <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+    <script>
+        const cards = document.querySelectorAll('.fade-in');
+
+        function showCards() {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if(rect.top < window.innerHeight - 50){
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', showCards);
+        window.addEventListener('load', showCards);
+
+        // Show More button functionality
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const story5 = document.getElementById('story5');
+        const story6 = document.getElementById('story6');
+
+        showMoreBtn.addEventListener('click', () => {
+            story5.style.display = 'block';
+            story5.classList.add('visible');
+            story6.style.display = 'block';
+            story6.classList.add('visible');
+            showMoreBtn.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations and volenters</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+body {
+    background: #f5f5f5;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.description {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.btn {
+    background: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #2a4b8c;
+}
+
+.color{
+    color: rgb(5, 5, 72);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal input, .modal textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.close-btn {
+    background: #ff4444;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background: #cc0000;
+}
+.amount-options {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.amount-btn {
+    padding: 10px 15px;
+    border: 2px solid #1a2a6c;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.amount-btn.selected {
+    background: #1a2a6c;
+    color: white;
+}
+
+.custom-amount {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.donate-submit {
+    width: 100%;
+    margin-top: 15px;
+}
+    </style>
+</head>
+<body>
+       <header>
+     <div>
+        <div>
+        <div>
+            <div id="head">
+                <span class="parent-head">
+                <span><i class="fa-brands fa-facebook-f"></i></span>
+                <span><i class="fa-brands fa-x-twitter"></i></span>
+                <span><i class="fa-brands fa-google-plus-g"></i></span>
+                <span><i class="fa-brands fa-linkedin"></i></span>
+                <span><i class="fa-brands fa-square-youtube"></i></span>
+                </span>
+                <div class="contact-info">
+                <span>
+                    <i class="fa-solid fa-phone-flip" style="color: #FFB84C;"></i>+92 (304) 386-6719
+                </span>
+                <span>
+                    <i class="fa-solid fa-phone-flip" style="color: #FFB84C;"></i> +92 (317) 011-3001
+                </span>
+                <button id="call-me">
+                    CALL ME BACK
+                </button>
+                </div>
+            </div>
+
+            <div id="head2">
+                <nav>
+
+                    <ul>
+                        <img class="logo" src="logo.jpeg" alt="LOGO">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/index.html#our-mission">OUR MISSION</a></li>
+                        <li><a href="/aboutUs.html">ABOUT</a></li>
+                        <li><a href="/index.html#our-services">SERVICES</a></li>
+                        <li><a href="/donations.html">Donation</a></li>
+                        <li><a href="/donations.html">Volunteer</a></li>
+                        <li><a href="/successStories.html">SUCCESS STORIES</a></li>
+                        <li><a href="/index.html#our-services">OUR SERVICES</a></li>
+                        <li><a href="/index.html#contact-us">CONTACT US</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            </div>
+        </div>
+        </header>
+<hr>
+<br>
+
+<div class="center">
+    <H1 class="color">Donations and volunteer</H1><br>
+    <br>
+        <br>
+    <h2>Help the world become a better place! Donate or volenter</h2>
+<br><br><hr><br><br>
+
+<div class="container">
+
+    <!-- Donation Card -->
+    <div class="card donation">
+        <h2 class="title">Donation</h2>
+        <p class="description">Support our mission to help underprivileged students access quality education through your generous donations.</p>
+        <button class="btn" onclick="openDonationForm()">Donate Now</button>
+    </div>
+    
+    <!-- Volunteer Card -->
+    <div class="card volunteer">
+        <h2 class="title">Volunteer</h2>
+        <p class="description">Join our team and help guide students through exam preparation, scholarship applications, and educational counseling.</p>
+        <button class="btn" onclick="openVolunteerForm()">Volunteer Now</button>
+    </div>
+</div>
+</div>
+
+<footer class="site-footer-minimal">
+    <div class="footer-content-minimal">
+        <p>
+            <a href="mailto:info@raisetorise.org">info@raisetorise.org</a> | 
+            <a href="contact.html">Contact Us</a> | 
+            <a href="about.html">About Us</a>
+        </p>
+
+        <div class="social-links-minimal">
+            <a href="#" aria-label="Facebook">Facebook</a> &bull; 
+            <a href="#" aria-label="Instagram">Instagram</a> &bull;
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        
+        <p class="copyright-minimal">
+            &copy; 2025 Raise to Rise | <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+
+<!-- DONATION MODAL -->
+<div class="modal" id="donationModal">
+    <div class="modal-content">
+        <h2>Make a Donation</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        
+        <div class="amount-options">
+            <button class="amount-btn" data-amount="25">$25</button>
+            <button class="amount-btn" data-amount="50">$50</button>
+            <button class="amount-btn" data-amount="100">$100</button>
+        </div>
+        
+        <input type="number" placeholder="Custom Amount ($)" class="custom-amount">
+        
+        <button class="btn donate-submit">Donate Now</button>
+        <button class="btn close-btn" onclick="closeDonationForm()">Close</button>
+    </div>
+</div>
+<!-- POPUP FORM HTML -->
+
+<div class="modal" id="volunteerModal">
+    <div class="modal-content">
+        <h2>Volunteer Form</h2>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone Number">
+        <textarea placeholder="Why do you want to volunteer?" rows="4"></textarea>
+        <button class="btn">Submit</button>
+        <button class="btn close-btn" onclick="closeVolunteerForm()">Close</button>
+    </div>
+</div>
+
+<script>
+
+function loadDonationJS() {
+    alert("Loading donation module...");
+}
+
+function openVolunteerForm() {
+    document.getElementById("volunteerModal").style.display = "flex";
+}
+
+function closeVolunteerForm() {
+    document.getElementById("volunteerModal").style.display = "none";
+}
+
+function openDonationForm() {
+    document.getElementById("donationModal").style.display = "flex";
+}
+
+function closeDonationForm() {
+    document.getElementById("donationModal").style.display = "none";
+}
+
+// Add this event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // Amount selection
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.amount-btn').forEach(b => {
+                b.classList.remove('selected');
+            });
+            this.classList.add('selected');
+            document.querySelector('.custom-amount').value = '';
+        });
+    });
+    
+    // Custom amount clears selection
+    document.querySelector('.custom-amount').addEventListener('input', function() {
+        document.querySelectorAll('.amount-btn').forEach(b => {
+            b.classList.remove('selected');
+        });
+    });
+    
+    // Donation submission
+    document.querySelector('.donate-submit').addEventListener('click', function() {
+        alert('Thank you for your donation!');
+        closeDonationForm();
+    });
+});
+
+</script>
+
+</body>
+</html>
